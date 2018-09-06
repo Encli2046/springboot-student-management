@@ -1,0 +1,31 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/student?characterEncoding=utf-8
+      username: root
+      password: 123456
+      type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+logging:
+  level:
+    root: info
+    com.encli: debug
+  file: D:\wanLiCloud\springboot.log
+mybatis:
+  mapper-locations: classpath:com/encli/mapper/*.xml
+
+#pagehelper分页配置 第二种和第三种不需要 重点讲的第一种需要
+pagehelper:
+ helperDialect: mysql
+ reasonable: true
+ supportMethodsArguments: true
+ params: count=countSql
+
+#myPassword: dfsdfdfaf982312312asf
+
+
+
